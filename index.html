@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STAR Nail Studio | Nail Designer & Estética de Luxo</title>
+  <meta name="description" content="Ateliê exclusivo de Nail Design e cuidados com as unhas. Experiência de luxo, higiene impecável e naturalidade." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#FAF8F5',
+              card: '#F3EEEA',
+              nude: '#E8DFD8',
+              rose: '#E6C5C0',
+              gold: '#C5A880',
+              dark: '#1A1A1A',
+              muted: '#736E6A'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF8F5; color: #1A1A1A; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-rose selection:text-brand-dark">
+
+  <!-- Header Fixo & Transparente -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-brand-nude/40 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-serif text-2xl tracking-widest uppercase text-brand-dark">STAR<span class="text-xs tracking-normal block font-sans text-brand-muted font-light">Nail Studio</span></a>
+      
+      <!-- Nav Desktop -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium text-brand-dark/80">
+        <a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a>
+        <a href="#espaco" class="hover:text-brand-gold transition-colors">O Espaço</a>
+        <a href="#servicos" class="hover:text-brand-gold transition-colors">Menu de Serviços</a>
+        <a href="#calculadora" class="hover:text-brand-gold transition-colors">Monte seu Plano</a>
+        <a href="#trabalhos" class="hover:text-brand-gold transition-colors">Galeria</a>
+        <a href="#contato" class="hover:text-brand-gold transition-colors">Contato</a>
+      </nav>
+
+      <!-- Botão Ação Rápida Desktop -->
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" class="hidden md:inline-flex items-center px-5 py-2.5 text-xs tracking-widest uppercase border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300">
+        Agendar
+      </a>
+
+      <!-- Menu Mobile Toggle -->
+      <button id="menu-btn" aria-label="Abrir Menu" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Menu Drawer Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-bg border-b border-brand-nude px-6 py-6 space-y-4 text-sm uppercase tracking-widest text-center">
+      <a href="#sobre" class="block py-2 text-brand-dark">Sobre</a>
+      <a href="#espaco" class="block py-2 text-brand-dark">O Espaço</a>
+      <a href="#servicos" class="block py-2 text-brand-dark">Serviços</a>
+      <a href="#calculadora" class="block py-2 text-brand-dark">Monte seu Plano</a>
+      <a href="#trabalhos" class="block py-2 text-brand-dark">Galeria</a>
+      <a href="#contato" class="block py-2 text-brand-dark">Contato</a>
+      <a href="https://wa.me/5511999999999" class="block w-full py-3 mt-4 bg-brand-dark text-white text-xs uppercase tracking-widest">Agendar pelo WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-32 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7 space-y-6">
+        <span class="inline-block text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Cuidado & Alta Cutilagem</span>
+        <h1 class="font-serif text-4xl md:text-6xl text-brand-dark leading-tight font-normal">
+          A estética minimalista e o luxo tátil para as suas unhas.
+        </h1>
+        <p class="text-brand-muted text-sm md:text-base font-light leading-relaxed max-w-lg">
+          Técnicas europeias de esmaltação em gel, biossegurança rigorosa e um refúgio de bem-estar pensado para quem valoriza os detalhes.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" class="px-8 py-4 bg-brand-dark text-white text-xs tracking-widest uppercase hover:bg-brand-gold transition-colors duration-300 text-center">
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#servicos" class="px-8 py-4 border border-brand-nude text-brand-dark text-xs tracking-widest uppercase hover:border-brand-dark transition-colors duration-300 text-center">
+            Ver Serviços
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-5 relative">
+        <div class="aspect-[4/5] rounded-t-full overflow-hidden bg-brand-card shadow-sm border border-brand-nude">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop" alt="Esmaltação elegante e unhas impecáveis" class="w-full h-full object-cover filter brightness-[0.98] contrast-[0.98]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sobre -->
+  <section id="sobre" class="py-20 bg-brand-card border-y border-brand-nude/60">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">A Especialista</span>
+      <h2 class="font-serif text-3xl md:text-4xl font-normal">Artesania, Precisão e Saúde</h2>
+      <p class="text-brand-muted text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto">
+        Com formação internacional e mais de 7 anos dedicados ao aperfeiçoamento da manicure russa e blindagem de alta performance, fundei o estúdio com a premissa de que o cuidado com as unhas deve ser um ritual restaurador, indolor e visualmente impecável.
+      </p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-brand-nude/80">
+        <div>
+          <span class="font-serif text-3xl text-brand-dark block">7+</span>
+          <span class="text-xs text-brand-muted uppercase tracking-wider">Anos de Experiência</span>
+        </div>
+        <div>
+          <span class="font-serif text-3xl text-brand-dark block">100%</span>
+          <span class="text-xs text-brand-muted uppercase tracking-wider">Biossegurança</span>
+        </div>
+        <div>
+          <span class="font-serif text-3xl text-brand-dark block">12+</span>
+          <span class="text-xs text-brand-muted uppercase tracking-wider">Certificações</span>
+        </div>
+        <div>
+          <span class="font-serif text-3xl text-brand-dark block">2k+</span>
+          <span class="text-xs text-brand-muted uppercase tracking-wider">Atendimentos VIP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O Espaço / Estúdio -->
+  <section id="espaco" class="py-24 max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+      <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">A Atmosfera</span>
+      <h2 class="font-serif text-3xl md:text-4xl">Um Santuário de Serenidade</h2>
+      <p class="text-brand-muted text-sm font-light">Ambiente climatizado, com aromas exclusivos e protocolos hospitalares de esterilização.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="space-y-3">
+        <div class="aspect-square bg-brand-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Atendimento individualizado e café especial" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-serif text-lg">Atendimento Privativo</h3>
+        <p class="text-xs text-brand-muted font-light leading-relaxed">Sessões individuais com menu de cafés especiais, chás orgânicos e playlist relaxante.</p>
+      </div>
+      <div class="space-y-3">
+        <div class="aspect-square bg-brand-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop" alt="Instrumentos esterilizados em autoclave" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-serif text-lg">Autoclave de Grau Hospitalar</h3>
+        <p class="text-xs text-brand-muted font-light leading-relaxed">Kits 100% esterilizados e embalados individualmente na sua frente. Descartáveis premium.</p>
+      </div>
+      <div class="space-y-3">
+        <div class="aspect-square bg-brand-card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=800&auto=format&fit=crop" alt="Produtos cruelty-free e hipoalergênicos" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-serif text-lg">Curadoria de Esmaltes</h3>
+        <p class="text-xs text-brand-muted font-light leading-relaxed">Fórmulas hipoalergênicas, cruelty-free e marcas internacionais com alta durabilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu de Serviços -->
+  <section id="servicos" class="py-24 bg-brand-card border-y border-brand-nude/60">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">Menu Exclusivo</span>
+        <h2 class="font-serif text-3xl md:text-4xl">Rituais & Serviços</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-brand-bg p-6 border border-brand-nude flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl text-brand-dark">Manicure Russa Combinada</h3>
+              <span class="font-serif text-lg text-brand-gold">R$ 160</span>
+            </div>
+            <p class="text-xs text-brand-muted font-light leading-relaxed mb-4">Limpeza profunda e delicada da cutícula com micromotor. Acabamento fotogênico e durabilidade superior.</p>
+          </div>
+          <div class="flex justify-between text-[11px] uppercase tracking-widest text-brand-muted border-t border-brand-nude pt-3">
+            <span>Duração: 1h 30min</span>
+            <span>Garantia: 7 dias</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-bg p-6 border border-brand-nude flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl text-brand-dark">Blindagem de Gel com Nivelamento</h3>
+              <span class="font-serif text-lg text-brand-gold">R$ 210</span>
+            </div>
+            <p class="text-xs text-brand-muted font-light leading-relaxed mb-4">Camada protetora em gel estruturado para unhas naturais. Fortalece, impede quebras e mantém a esmaltação perfeita por até 25 dias.</p>
+          </div>
+          <div class="flex justify-between text-[11px] uppercase tracking-widest text-brand-muted border-t border-brand-nude pt-3">
+            <span>Duração: 1h 45min</span>
+            <span>Durabilidade: ~3 semanas</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-bg p-6 border border-brand-nude flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl text-brand-dark">Alongamento em Fibra de Vidro Slim</h3>
+              <span class="font-serif text-lg text-brand-gold">R$ 340</span>
+            </div>
+            <p class="text-xs text-brand-muted font-light leading-relaxed mb-4">Estrutura leve, natural e ultra-resistente. Moldada com precisão milimétrica respeitando o formato da sua lâmina.</p>
+          </div>
+          <div class="flex justify-between text-[11px] uppercase tracking-widest text-brand-muted border-t border-brand-nude pt-3">
+            <span>Duração: 2h 30min</span>
+            <span>Manutenção: 21-25 dias</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-brand-bg p-6 border border-brand-nude flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl text-brand-dark">Spa das Mãos & Hidratação de Cutículas</h3>
+              <span class="font-serif text-lg text-brand-gold">R$ 90</span>
+            </div>
+            <p class="text-xs text-brand-muted font-light leading-relaxed mb-4">Esfoliação botânica, máscara de parafina fria e massagem relaxante com óleos essenciais puros.</p>
+          </div>
+          <div class="flex justify-between text-[11px] uppercase tracking-widest text-brand-muted border-t border-brand-nude pt-3">
+            <span>Duração: 40min</span>
+            <span>Rendimento: Nutrição imediata</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora de Plano Personalizado -->
+  <section id="calculadora" class="py-24 max-w-4xl mx-auto px-6">
+    <div class="bg-white border border-brand-nude p-8 md:p-12 shadow-sm rounded-none">
+      <div class="text-center max-w-md mx-auto mb-10 space-y-2">
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-medium">Interativo</span>
+        <h2 class="font-serif text-3xl">Monte Seu Ritual Personalizado</h2>
+        <p class="text-xs text-brand-muted font-light">Selecione os procedimentos desejados para simular o valor total do seu atendimento.</p>
+      </div>
+
+      <form id="calc-form" class="space-y-6">
+        <div class="space-y-3">
+          <label class="block text-xs uppercase tracking-widest font-semibold text-brand-dark">1. Serviço Principal</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <label class="border border-brand-nude p-4 cursor-pointer text-center hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <input type="radio" name="base_service" value="160" data-name="Manicure Russa" class="sr-only" checked>
+              <span class="block text-sm font-medium">Manicure Russa</span>
+              <span class="block text-xs text-brand-muted mt-1">R$ 160</span>
+            </label>
+            <label class="border border-brand-nude p-4 cursor-pointer text-center hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <input type="radio" name="base_service" value="210" data-name="Blindagem de Gel" class="sr-only">
+              <span class="block text-sm font-medium">Blindagem Gel</span>
+              <span class="block text-xs text-brand-muted mt-1">R$ 210</span>
+            </label>
+            <label class="border border-brand-nude p-4 cursor-pointer text-center hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <input type="radio" name="base_service" value="340" data-name="Alongamento Fibra" class="sr-only">
+              <span class="block text-sm font-medium">Alongamento Fibra</span>
+              <span class="block text-xs text-brand-muted mt-1">R$ 340</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-3 pt-4 border-t border-brand-nude/40">
+          <label class="block text-xs uppercase tracking-widest font-semibold text-brand-dark">2. Adicionais & Nail Art</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-center justify-between border border-brand-nude p-3.5 cursor-pointer hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" name="extra" value="50" data-name="Nail Art Minimalista" class="accent-brand-dark">
+                <span class="text-xs font-medium">Nail Art Minimalista</span>
+              </div>
+              <span class="text-xs text-brand-muted">+ R$ 50</span>
+            </label>
+            <label class="flex items-center justify-between border border-brand-nude p-3.5 cursor-pointer hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" name="extra" value="70" data-name="Efeito Crome / Aurora" class="accent-brand-dark">
+                <span class="text-xs font-medium">Efeito Crome / Pearlescent</span>
+              </div>
+              <span class="text-xs text-brand-muted">+ R$ 70</span>
+            </label>
+            <label class="flex items-center justify-between border border-brand-nude p-3.5 cursor-pointer hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" name="extra" value="90" data-name="Spa das Mãos" class="accent-brand-dark">
+                <span class="text-xs font-medium">Spa das Mãos Completo</span>
+              </div>
+              <span class="text-xs text-brand-muted">+ R$ 90</span>
+            </label>
+            <label class="flex items-center justify-between border border-brand-nude p-3.5 cursor-pointer hover:border-brand-dark transition-all has-[:checked]:border-brand-dark has-[:checked]:bg-brand-bg">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" name="extra" value="40" data-name="Remoção Externa" class="accent-brand-dark">
+                <span class="text-xs font-medium">Remoção de Alongamento Anterior</span>
+              </div>
+              <span class="text-xs text-brand-muted">+ R$ 40</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-brand-nude flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-brand-muted block">Estimativa Final:</span>
+            <span id="total-price" class="font-serif text-3xl text-brand-dark font-normal">R$ 160,00</span>
+          </div>
+          <button type="button" id="send-whatsapp-calc" class="w-full sm:w-auto px-8 py-4 bg-brand-dark text-white text-xs uppercase tracking-widest hover:bg-brand-gold transition-colors">
+            Enviar Orçamento pelo WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Galeria de Trabalhos -->
+  <section id="trabalhos" class="py-24 bg-brand-card border-y border-brand-nude/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-md mx-auto mb-16 space-y-2">
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">Portfolio</span>
+        <h2 class="font-serif text-3xl md:text-4xl">Galeria de Resultados</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-square bg-brand-bg overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop" alt="Trabalho de Nail Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square bg-brand-bg overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=600&auto=format&fit=crop" alt="Esmaltação Nude Delicada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square bg-brand-bg overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600&auto=format&fit=crop" alt="Cutilagem Perfeita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="aspect-square bg-brand-bg overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Alongamento Fibra Slim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-md mx-auto mb-16 space-y-2">
+      <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">Experiências</span>
+      <h2 class="font-serif text-3xl">O Que Dizem Nossas Clientes</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 border border-brand-nude space-y-4">
+        <div class="flex text-brand-gold text-xs">★★★★★</div>
+        <p class="text-xs text-brand-muted font-light leading-relaxed italic">"A precisão da cutilagem russa é inacreditável. Minha esmaltação dura quase um mês sem descascar nada."</p>
+        <span class="block text-xs uppercase tracking-widest font-medium text-brand-dark pt-2 border-t border-brand-nude/40">Mariana S.</span>
+      </div>
+      <div class="bg-white p-8 border border-brand-nude space-y-4">
+        <div class="flex text-brand-gold text-xs">★★★★★</div>
+        <p class="text-xs text-brand-muted font-light leading-relaxed italic">"O ambiente passa uma paz absurda. É o único momento da minha semana corrida onde eu realmente consigo desacelerar."</p>
+        <span class="block text-xs uppercase tracking-widest font-medium text-brand-dark pt-2 border-t border-brand-nude/40">Beatriz R.</span>
+      </div>
+      <div class="bg-white p-8 border border-brand-nude space-y-4">
+        <div class="flex text-brand-gold text-xs">★★★★★</div>
+        <p class="text-xs text-brand-muted font-light leading-relaxed italic">"Elegância extrema. Unhas finas, naturais e saudáveis. Nunca mais volto para salões convencionais."</p>
+        <span class="block text-xs uppercase tracking-widest font-medium text-brand-dark pt-2 border-t border-brand-nude/40">Camila F.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feed do Instagram -->
+  <section class="py-20 bg-brand-card border-t border-brand-nude/60 text-center">
+    <div class="max-w-4xl mx-auto px-6 space-y-6">
+      <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">@starnailstudio</span>
+      <h2 class="font-serif text-2xl md:text-3xl">Acompanhe Nosso Feed no Instagram</h2>
+      <a href="https://instagram.com" target="_blank" class="inline-block px-8 py-3 border border-brand-dark text-xs uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all">
+        Seguir no Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- Localização & Contato -->
+  <section id="contato" class="py-24 max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-5 space-y-6">
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold">Localização & Agendamentos</span>
+        <h2 class="font-serif text-3xl font-normal">Venha Nos Visitar</h2>
+        
+        <div class="space-y-4 text-xs font-light text-brand-muted leading-relaxed">
+          <p><strong class="font-semibold text-brand-dark uppercase block tracking-wider mb-1">Endereço:</strong> Alameda Gabriel Monteiro da Silva, 1400 - Jardins, São Paulo - SP</p>
+          <p><strong class="font-semibold text-brand-dark uppercase block tracking-wider mb-1">Horário de Funcionamento:</strong> Terça a Sábado: 09:00 às 19:00</p>
+          <p><strong class="font-semibold text-brand-dark uppercase block tracking-wider mb-1">Contato Direct / WhatsApp:</strong> (11) 99999-9999</p>
+        </div>
+
+        <div class="pt-4">
+          <a href="https://maps.google.com" target="_blank" class="inline-block px-6 py-3 bg-brand-nude/50 text-brand-dark text-xs uppercase tracking-widest hover:bg-brand-nude transition-colors">
+            Como Chegar (Google Maps)
+          </a>
+        </div>
+      </div>
+
+      <!-- Mapa Incorporado -->
+      <div class="md:col-span-7 bg-brand-card border border-brand-nude min-h-[300px] flex items-center justify-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1974780516637!2d-46.6713!3d-23.5613!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQwLjciUyA0NsKwNDAnMTYuNyJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" class="w-full h-full min-h-[320px] border-0 filter opacity-90 contrast-125" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-brand-dark text-white/70 py-12 border-t border-brand-dark">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-light">
+      <div class="text-center md:text-left">
+        <span class="font-serif text-xl tracking-widest text-white uppercase block">STAR</span>
+        <span class="text-[10px] text-brand-gold uppercase tracking-widest">Ateliê de Nail Design Exclusivo</span>
+      </div>
+      <div>
+        © 2026 STAR Nail Studio. Todos os direitos reservados.
+      </div>
+      <div class="flex space-x-6 text-white">
+        <a href="#" class="hover:text-brand-gold transition-colors">Instagram</a>
+        <a href="#" class="hover:text-brand-gold transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar." target="_blank" aria-label="Agendar via WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Script Interativo (Vanilla JS) -->
+  <script>
+    // Menu Mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Lógica da Calculadora Dinâmica
+    const calcForm = document.getElementById('calc-form');
+    const totalPriceEl = document.getElementById('total-price');
+    const sendWhatsappBtn = document.getElementById('send-whatsapp-calc');
+
+    function calculateTotal() {
+      const selectedBase = calcForm.querySelector('input[name="base_service"]:checked');
+      let baseVal = selectedBase ? parseFloat(selectedBase.value) : 0;
+      let baseName = selectedBase ? selectedBase.getAttribute('data-name') : '';
+
+      const selectedExtras = calcForm.querySelectorAll('input[name="extra"]:checked');
+      let extraVal = 0;
+      let extraNames = [];
+
+      selectedExtras.forEach(item => {
+        extraVal += parseFloat(item.value);
+        extraNames.push(item.getAttribute('data-name'));
+      });
+
+      const total = baseVal + extraVal;
+      totalPriceEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+
+      return { total, baseName, extraNames };
+    }
+
+    calcForm.addEventListener('change', calculateTotal);
+
+    sendWhatsappBtn.addEventListener('click', () => {
+      const { total, baseName, extraNames } = calculateTotal();
+      let text = `Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20agendamento%20com%20o%20seguinte%20plano%20personalizado:%0A%0A`;
+      text += `%E2%9C%A8%20*Servi%C3%A7o%20Base:*%20${encodeURIComponent(baseName)}%0A`;
+      if (extraNames.length > 0) {
+        text += `%E2%9C%A8%20*Adicionais:*%20${encodeURIComponent(extraNames.join(', '))}%0A`;
+      }
+      text += `%0A%F0%9F%92%B3%20*Valor%20Estimado:*%20R$%20${total.toFixed(2).replace('.', ',')}%0A%0AComo%20fa%C3%A7o%20para%20confirmar%20a%20data?`;
+
+      window.open(`https://wa.me/5511999999999?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+</html>
